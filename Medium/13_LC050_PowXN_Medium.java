@@ -14,15 +14,14 @@ class Solution {
     public double calculate(double x, long n) {
 
         if (n == 0) {
-            return 1;
+            return 1.0;
         }
 
         double half = calculate(x, n / 2);
 
         if (n % 2 == 0) {
             return half * half;
-        }
-        else {
+        } else {
             return half * half * x;
         }
     }
